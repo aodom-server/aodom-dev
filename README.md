@@ -1,32 +1,13 @@
-# aodom.dev Resume Site
+# Andrew Odom Resume Site
 
-Static resume site served from `odom-hp` by Caddy.
+My public resume site: fast, clean, and less suspicious than emailing someone a file named `resume_final_final.pdf`.
 
-## Local path on server
+## Run It
 
-```text
-/srv/docker/sites/aodom-dev
-```
-
-Caddy serves:
-
-```text
-/srv/docker/sites/aodom-dev/site
-```
-
-## Edit
+Open `site/index.html`, or serve it locally:
 
 ```bash
-cd /srv/docker/sites/aodom-dev
-nano site/index.html
+python3 -m http.server 8000 --directory site
 ```
 
-Changes are live after saving because Caddy serves the static files directly.
-
-## Git
-
-```bash
-git status
-git add .
-git commit -m "Update resume site"
-```
+That is it. No build step, no dependency ritual, no tiny JavaScript kingdom.

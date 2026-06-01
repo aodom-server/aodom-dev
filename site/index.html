@@ -3,184 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Andrew Odom | Resume</title>
-  <meta name="description" content="Resume and project profile for Andrew Odom.">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7f8fa;
-      --ink: #15191f;
-      --muted: #5f6b7a;
-      --line: #d9dee7;
-      --accent: #0f766e;
-      --panel: #ffffff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.55;
-    }
-    main {
-      width: min(900px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 48px 0 64px;
-    }
-    header {
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 24px;
-      margin-bottom: 28px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2.2rem, 6vw, 4.2rem);
-      line-height: 1;
-      letter-spacing: 0;
-    }
-    .role {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-    .contact a { color: var(--accent); text-decoration: none; }
-    section {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 24px;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    h2 {
-      margin: 0;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    h3 {
-      margin: 0 0 4px;
-      font-size: 1.05rem;
-    }
-    p { margin: 0 0 12px; }
-    ul { margin: 8px 0 0; padding-left: 20px; }
-    li + li { margin-top: 6px; }
-    .item + .item { margin-top: 22px; }
-    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 8px; }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 0;
-      list-style: none;
-    }
-    .skills li {
-      margin: 0;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      padding: 6px 10px;
-      border-radius: 6px;
-      color: #27313f;
-    }
-    @media (max-width: 720px) {
-      main { width: min(100% - 28px, 900px); padding-top: 32px; }
-      section { grid-template-columns: 1fr; gap: 10px; }
-      header { margin-bottom: 12px; }
-    }
-  </style>
+  <title>Andrew Odom | Software Developer</title>
+  <meta name="description" content="Resume, project profile, and selected work for Andrew Odom, a software developer building mobile apps, web apps, and backend-connected products.">
+  <link rel="preload" as="image" href="assets/hero-workbench.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Andrew Odom</h1>
-      <p class="role">Software Developer | Flutter, Next.js, TypeScript, Supabase</p>
-      <div class="contact" aria-label="Contact links">
-        <span>aodom.dev</span>
-        <a href="mailto:hello@aodom.dev">hello@aodom.dev</a>
-        <a href="https://github.com/andrewodom18">github.com/andrewodom18</a>
-      </div>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <section>
-      <h2>Profile</h2>
-      <div>
-        <p>Developer building mobile apps, web apps, and backend-connected products with Flutter, TypeScript, Next.js, Supabase, and modern deployment workflows.</p>
-      </div>
-    </section>
+  <site-header></site-header>
 
-    <section>
-      <h2>Projects</h2>
-      <div>
-        <div class="item">
-          <h3>Project Name</h3>
-          <p class="meta">Flutter | Supabase | RevenueCat</p>
-          <ul>
-            <li>Built a cross-platform app with authentication, subscriptions, and hosted backend services.</li>
-            <li>Designed a clean user flow from onboarding through paid feature access.</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3>Web App Name</h3>
-          <p class="meta">Next.js | TypeScript | Cloudflare Tunnel | Docker</p>
-          <ul>
-            <li>Deployed a containerized web app on a private Ubuntu server with public routing through Cloudflare.</li>
-            <li>Configured a repeatable hosting pattern for subdomain-based apps.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <div>
-        <div class="item">
-          <h3>Role or Company</h3>
-          <p class="meta">Dates | Location or Remote</p>
-          <ul>
-            <li>Replace this with your most relevant work, product, or technical accomplishment.</li>
-            <li>Use measurable outcomes where possible: users, revenue, speed, reliability, or shipped features.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <div>
-        <ul class="skills">
-          <li>Flutter</li>
-          <li>Dart</li>
-          <li>TypeScript</li>
-          <li>Next.js</li>
-          <li>React</li>
-          <li>Supabase</li>
-          <li>RevenueCat</li>
-          <li>Docker</li>
-          <li>Cloudflare</li>
-          <li>Linux</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <div>
-        <div class="item">
-          <h3>School or Certification</h3>
-          <p class="meta">Credential | Year</p>
-          <p>Replace this with your degree, coursework, certification, or self-directed training.</p>
-        </div>
-      </div>
-    </section>
+  <main id="main">
+    <hero-section></hero-section>
+    <profile-section></profile-section>
+    <projects-section></projects-section>
+    <experience-section></experience-section>
+    <skills-section></skills-section>
+    <resume-download-section></resume-download-section>
+    <contact-section></contact-section>
   </main>
+
+  <site-footer></site-footer>
+
+  <noscript>
+    <section class="noscript-note">
+      <h1>Andrew Odom</h1>
+      <p>This resume site uses lightweight JavaScript components. Enable JavaScript to view the full version, or download the PDF from <a href="assets/andrew-odom-resume.pdf">assets/andrew-odom-resume.pdf</a>.</p>
+    </section>
+  </noscript>
+
+  <script defer src="assets/js/content.js"></script>
+  <script defer src="assets/js/lib/dom.js"></script>
+  <script defer src="assets/js/components/site-header.js"></script>
+  <script defer src="assets/js/components/hero-section.js"></script>
+  <script defer src="assets/js/components/profile-section.js"></script>
+  <script defer src="assets/js/components/projects-section.js"></script>
+  <script defer src="assets/js/components/experience-section.js"></script>
+  <script defer src="assets/js/components/skills-section.js"></script>
+  <script defer src="assets/js/components/resume-download-section.js"></script>
+  <script defer src="assets/js/components/contact-section.js"></script>
+  <script defer src="assets/js/components/site-footer.js"></script>
+  <script defer src="assets/js/interactions.js"></script>
 </body>
 </html>

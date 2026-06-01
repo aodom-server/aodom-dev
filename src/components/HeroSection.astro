@@ -1,0 +1,48 @@
+---
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  hero: ResumeContent["hero"];
+}
+
+const { hero } = Astro.props;
+
+function buttonClass(variant?: string) {
+  if (variant === "primary") return "button button-primary";
+  if (variant === "accent") return "button button-accent";
+  return "button";
+}
+---
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">{hero.eyebrow}</p>
+      <h1>{hero.title}</h1>
+      <p class="lead">{hero.lead}</p>
+      <div class="hero-actions" aria-label="Primary actions">
+        {
+          hero.actions.map((action) => (
+            <a
+              class={buttonClass(action.variant)}
+              href={action.href}
+              {...(action.download ? { download: true } : {})}
+            >
+              {action.label}
+            </a>
+          ))
+        }
+      </div>
+      <div class="hero-proof" aria-label="Highlights">
+        {
+          hero.proof.map((item) => (
+            <div class="proof-tile">
+              <span class="proof-kicker">{item.label}</span>
+              <strong>{item.text}</strong>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

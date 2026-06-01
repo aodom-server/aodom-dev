@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  email: string;
+}
+
+const { title, description, email } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="/assets/hero-workbench.png" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" />
+  </head>
+  <body data-email={email}>
+    <slot />
+    <script defer src="/assets/js/interactions.js"></script>
+  </body>
+</html>

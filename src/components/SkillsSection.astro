@@ -1,0 +1,26 @@
+---
+import SectionIntro from "./SectionIntro.astro";
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  skills: ResumeContent["skills"];
+}
+
+const { skills } = Astro.props;
+---
+
+<section class="section section-tint" id="skills">
+  <div class="section-inner section-grid">
+    <SectionIntro section={skills} />
+    <div class="skill-grid" aria-label="Technical skills">
+      {
+        skills.items.map((skill) => (
+          <div class="skill-pill reveal">
+            {skill}
+            <span class="skill-dot" aria-hidden="true"></span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

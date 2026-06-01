@@ -1,0 +1,41 @@
+---
+import SectionIntro from "./SectionIntro.astro";
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  work: ResumeContent["work"];
+}
+
+const { work } = Astro.props;
+---
+
+<section class="section section-tint" id="work">
+  <div class="section-inner section-grid">
+    <SectionIntro section={work} />
+    <div class="project-grid">
+      {
+        work.cards.map((project) => (
+          <a
+            class="project-card reveal"
+            href={project.href}
+            target={project.local ? undefined : "_blank"}
+            rel={project.local ? undefined : "noreferrer"}
+          >
+            <div class="project-top">
+              <span class="project-type">{project.type}</span>
+              <span class="project-badge">{project.badge}</span>
+            </div>
+            <div class="project-body">
+              <h3>{project.title}</h3>
+              <p>{project.text}</p>
+              <div class="tag-row" aria-label="Project stack">
+                {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+              </div>
+              <span class="project-link">{project.linkText}</span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

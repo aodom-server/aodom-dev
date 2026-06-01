@@ -1,0 +1,27 @@
+---
+import SectionIntro from "./SectionIntro.astro";
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  profile: ResumeContent["profile"];
+}
+
+const { profile } = Astro.props;
+---
+
+<section class="section section-white" id="profile">
+  <div class="section-inner section-grid">
+    <SectionIntro section={profile} />
+    <div class="feature-grid">
+      {
+        profile.features.map((feature, index) => (
+          <article class="feature-card reveal">
+            <span class="feature-number">{String(index + 1).padStart(2, "0")}</span>
+            <h3>{feature.title}</h3>
+            <p>{feature.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

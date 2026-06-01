@@ -1,0 +1,35 @@
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skill-pill {
+  min-height: 74px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(21, 23, 25, 0.12);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow-soft);
+  font-weight: 900;
+}
+
+.skill-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--teal);
+  flex: 0 0 auto;
+}
+
+.skill-pill:nth-child(3n + 2) .skill-dot {
+  background: var(--coral);
+}
+
+.skill-pill:nth-child(3n + 3) .skill-dot {
+  background: var(--blue);
+}

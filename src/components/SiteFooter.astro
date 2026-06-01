@@ -1,0 +1,16 @@
+---
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  content: ResumeContent;
+}
+
+const { content } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>{content.name}</span>
+    <span>{content.footer.note}</span>
+  </div>
+</footer>

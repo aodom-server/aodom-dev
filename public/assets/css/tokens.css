@@ -1,0 +1,17 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f2ec;
+  --ink: #151719;
+  --muted: #5d6673;
+  --panel: #ffffff;
+  --panel-soft: #faf8f3;
+  --line: #d8d2c8;
+  --teal: #0f766e;
+  --teal-dark: #0b4f4a;
+  --coral: #ee6c57;
+  --blue: #2557a7;
+  --lime: #8fb83f;
+  --shadow: 0 24px 60px rgba(33, 38, 45, 0.14);
+  --shadow-soft: 0 12px 30px rgba(33, 38, 45, 0.08);
+  --max: 1160px;
+}

@@ -1,0 +1,22 @@
+---
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  content: ResumeContent;
+}
+
+const { content } = Astro.props;
+---
+
+<header class="site-header" aria-label="Primary navigation">
+  <div class="nav-shell">
+    <a class="brand" href="#top" aria-label={`${content.name} home`}>
+      <span class="brand-mark" aria-hidden="true">AO</span>
+      <span>{content.name}</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      {content.nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <a class="nav-cta" href={content.pdfPath} download>Download PDF</a>
+  </div>
+</header>

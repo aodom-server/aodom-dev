@@ -1,0 +1,25 @@
+---
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  content: ResumeContent;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section section-white" id="resume">
+  <div class="section-inner">
+    <div class="resume-panel reveal">
+      <div>
+        <p class="section-label">{content.resume.label}</p>
+        <h2>{content.resume.title}</h2>
+        <p>{content.resume.text}</p>
+      </div>
+      <div class="button-row">
+        <a class="button button-primary" href={content.pdfPath} download>Download PDF</a>
+        <button class="button" type="button" data-print>Print page</button>
+      </div>
+    </div>
+  </div>
+</section>

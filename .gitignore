@@ -7,3 +7,7 @@ Thumbs.db
 # Local scratch files
 *.tmp
 *.bak
+
+# Node/Astro
+node_modules/
+.astro/

@@ -1,0 +1,29 @@
+---
+import SectionIntro from "./SectionIntro.astro";
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  experience: ResumeContent["experience"];
+}
+
+const { experience } = Astro.props;
+---
+
+<section class="section section-white" id="experience">
+  <div class="section-inner section-grid">
+    <SectionIntro section={experience} />
+    <div class="timeline">
+      {
+        experience.items.map((item) => (
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">{item.meta}</div>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

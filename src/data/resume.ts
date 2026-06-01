@@ -1,14 +1,12 @@
-window.ResumeSite = window.ResumeSite || {};
-
-window.ResumeSite.content = {
+export const resumeContent = {
   name: "Andrew Odom",
   email: "hello@aodom.dev",
   githubUrl: "https://github.com/andrewodom18",
   siteUrl: "https://aodom.dev",
-  pdfPath: "assets/andrew-odom-resume.pdf",
+  pdfPath: "/assets/andrew-odom-resume.pdf",
   nav: [
     { label: "Profile", href: "#profile" },
-    { label: "Builds", href: "#projects" },
+    { label: "Work", href: "#work" },
     { label: "Experience", href: "#experience" },
     { label: "PDF", href: "#resume" },
     { label: "Contact", href: "#contact" }
@@ -18,9 +16,9 @@ window.ResumeSite.content = {
     title: "Andrew Odom builds product-minded software with a bias for shipping.",
     lead: "I work across Flutter, TypeScript, Next.js, Supabase, and deployment workflows to turn useful ideas into clean, durable products.",
     actions: [
-      { label: "See the work", href: "#projects", variant: "primary" },
+      { label: "See the work", href: "#work", variant: "primary" },
       { label: "Start a conversation", href: "mailto:hello@aodom.dev" },
-      { label: "Old-school PDF", href: "assets/andrew-odom-resume.pdf", variant: "accent", download: true }
+      { label: "Download PDF", href: "/assets/andrew-odom-resume.pdf", variant: "accent", download: true }
     ],
     proof: [
       { label: "Focus", text: "Apps that feel clear, fast, and intentional." },
@@ -47,9 +45,9 @@ window.ResumeSite.content = {
       }
     ]
   },
-  projects: {
-    label: "Selected builds",
-    title: "Project slots ready for the good stuff.",
+  work: {
+    label: "Work Portfolio",
+    title: "Selected builds and project slots.",
     summary: "App and website links can drop straight into this section as they go public. The cards are built for direct live links, code links, or short case studies.",
     cards: [
       {
@@ -59,7 +57,7 @@ window.ResumeSite.content = {
         text: "A fast public profile built to communicate skills, projects, and contact paths without making anyone open a mystery attachment.",
         href: "https://aodom.dev",
         linkText: "Open live site",
-        tags: ["HTML", "CSS", "Responsive UI"]
+        tags: ["Astro", "CSS", "Responsive UI"]
       },
       {
         type: "Code",
@@ -121,6 +119,8 @@ window.ResumeSite.content = {
     text: "Send the context, the constraints, and what success should look like. I will bring product sense, clean implementation, and a healthy suspicion of unnecessary complexity."
   },
   footer: {
-    note: "Built with plain HTML, CSS, and an unreasonable dislike of bloated resumes."
+    note: "Built with Astro, plain CSS, and an unreasonable dislike of bloated resumes."
   }
-};
+} as const;
+
+export type ResumeContent = typeof resumeContent;

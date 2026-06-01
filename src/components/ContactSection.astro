@@ -1,0 +1,27 @@
+---
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  content: ResumeContent;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="section section-tint" id="contact">
+  <div class="section-inner">
+    <div class="contact-panel reveal">
+      <div>
+        <p class="section-label">{content.contact.label}</p>
+        <h2>{content.contact.title}</h2>
+        <p>{content.contact.text}</p>
+        <div class="contact-links" aria-label="Contact links">
+          <a href={`mailto:${content.email}`}>{content.email}</a>
+          <a href={content.githubUrl} target="_blank" rel="noreferrer">GitHub</a>
+          <button type="button" data-copy-email={content.email}>Copy email</button>
+        </div>
+      </div>
+      <a class="button" href={`mailto:${content.email}`}>Email Andrew</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+import ContactSection from "../components/ContactSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ProfileSection from "../components/ProfileSection.astro";
+import ResumeDownloadSection from "../components/ResumeDownloadSection.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SkillsSection from "../components/SkillsSection.astro";
+import WorkSection from "../components/WorkSection.astro";
+import { resumeContent } from "../data/resume";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Andrew Odom | Software Developer";
+const pageDescription = "Resume, project profile, and selected work for Andrew Odom, a software developer building mobile apps, web apps, and backend-connected products.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} email={resumeContent.email}>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <SiteHeader content={resumeContent} />
+
+  <main id="main">
+    <HeroSection hero={resumeContent.hero} />
+    <ProfileSection profile={resumeContent.profile} />
+    <WorkSection work={resumeContent.work} />
+    <ExperienceSection experience={resumeContent.experience} />
+    <SkillsSection skills={resumeContent.skills} />
+    <ResumeDownloadSection content={resumeContent} />
+    <ContactSection content={resumeContent} />
+  </main>
+
+  <SiteFooter content={resumeContent} />
+
+  <noscript>
+    <section class="noscript-note">
+      <h1>{resumeContent.name}</h1>
+      <p>
+        This resume site uses a small amount of JavaScript for animation and convenience actions.
+        You can still download the PDF from <a href={resumeContent.pdfPath}>assets/andrew-odom-resume.pdf</a>.
+      </p>
+    </section>
+  </noscript>
+</BaseLayout>

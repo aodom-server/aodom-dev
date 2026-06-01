@@ -1,13 +1,36 @@
-# Andrew Odom Resume Site
+# aodom.dev Resume Site
 
-My public resume site: fast, clean, and less suspicious than emailing someone a file named `resume_final_final.pdf`.
+My public resume site.
 
-## Run It
+*It somewhat proves I can program...*
 
-Open `site/index.html`, or serve it locally:
+## Stack
+
+This is an Astro static site. Source files live in `src/`, static assets live in `public/`, and the generated site is committed to `site/` because Caddy serves that directory directly on `odom-hp`.
+
+## Develop
 
 ```bash
-python3 -m http.server 8000 --directory site
+npm install
+npm run dev
 ```
 
-That is it. No build step, no dependency ritual, no tiny JavaScript kingdom.
+## Build
+
+```bash
+npm run build
+```
+
+Astro writes the production output to `site/`.
+
+## Server Path
+
+```text
+/srv/docker/sites/aodom-dev
+```
+
+Caddy serves:
+
+```text
+/srv/docker/sites/aodom-dev/site
+```

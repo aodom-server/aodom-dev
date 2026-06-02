@@ -1,60 +1,68 @@
 export const resumeContent = {
   name: "Andrew Odom",
   email: "hello@aodom.dev",
+  phone: "Available on request",
+  linkedInUrl: "https://www.linkedin.com/in/andrewodom18",
   githubUrl: "https://github.com/andrewodom18",
   siteUrl: "https://aodom.dev",
   pdfPath: "/assets/andrew-odom-resume.pdf",
   nav: [
     { label: "Profile", href: "#profile" },
-    { label: "Work", href: "#work" },
+    { label: "Portfolio", href: "#work" },
     { label: "Experience", href: "#experience" },
-    { label: "PDF", href: "#resume" },
+    { label: "Skills", href: "#skills" },
+    { label: "Resume PDF", href: "#resume" },
     { label: "Contact", href: "#contact" }
   ],
   hero: {
-    eyebrow: "Mobile apps | web systems | backend-connected products",
-    title: "Andrew Odom builds product-minded software with a bias for shipping.",
-    lead: "I work across Flutter, TypeScript, Next.js, Supabase, and deployment workflows to turn useful ideas into clean, durable products.",
+    eyebrow: "Resume | software developer | mobile and web",
+    title: "Andrew Odom, Software Developer",
+    lead: "I am looking for software developer roles where I can build mobile apps, web interfaces, and backend-connected systems with clear UX and maintainable code.",
+    contact: [
+      { label: "Email", text: "hello@aodom.dev", href: "mailto:hello@aodom.dev" },
+      { label: "LinkedIn", text: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
+      { label: "Phone", text: "Available on request" }
+    ],
     actions: [
-      { label: "See the work", href: "#work", variant: "primary" },
-      { label: "Start a conversation", href: "mailto:hello@aodom.dev" },
-      { label: "Download PDF", href: "/assets/andrew-odom-resume.pdf", variant: "accent", download: true }
+      { label: "Download resume", href: "/assets/andrew-odom-resume.pdf", variant: "primary", download: true },
+      { label: "View portfolio", href: "#work" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/andrewodom18", variant: "accent" }
     ],
     proof: [
-      { label: "Focus", text: "Apps that feel clear, fast, and intentional." },
-      { label: "Range", text: "Frontend polish backed by practical infrastructure." },
-      { label: "Stack", text: "Flutter, TypeScript, Next.js, Supabase, Docker." }
+      { label: "Open to", text: "Software developer roles in mobile, web, or full-stack teams." },
+      { label: "Build range", text: "Flutter apps, TypeScript interfaces, Supabase-backed workflows." },
+      { label: "Working style", text: "Readable code, practical releases, and focused product judgment." }
     ]
   },
   profile: {
-    label: "Profile",
-    title: "Useful software, edited until it feels obvious.",
-    summary: "I like products with clean flows, readable code, and a small number of moving parts doing their jobs well.",
+    label: "Resume Profile",
+    title: "Software developer focused on useful, maintainable applications.",
+    summary: "This page is the quick resume view: what I build, how I work, and where to find the portfolio pieces that prove it.",
     features: [
       {
-        title: "Product flow",
-        text: "Interfaces should guide people without making them read a manual first. I care about the path from first click to finished task."
+        title: "Mobile and web UI",
+        text: "I build clean user flows for app and web experiences, with attention to responsive layouts, state, and the path from first click to finished task."
       },
       {
-        title: "Full-stack sense",
-        text: "I can connect the visible experience to auth, data, payments, hosting, and the operational details that keep it running."
+        title: "Backend-connected work",
+        text: "I can connect the visible experience to auth, data, subscriptions, hosting, and the operational details that keep a product usable."
       },
       {
-        title: "Maintainable polish",
-        text: "The goal is not decorative complexity. It is a product that looks sharp, responds smoothly, and stays easy to improve."
+        title: "Maintainable delivery",
+        text: "I prefer readable code, small moving parts, and releases that stay understandable after the first demo."
       }
     ]
   },
   work: {
-    label: "Work Portfolio",
-    title: "Selected builds and project slots.",
-    summary: "App and website links can drop straight into this section as they go public. The cards are built for direct live links, code links, or short case studies.",
+    label: "Portfolio",
+    title: "Selected work and proof-of-build.",
+    summary: "This is the showcase side of the site. Portfolio cards should point hiring teams to live work, code, app launches, or short case studies.",
     cards: [
       {
         type: "Website",
         badge: "Live",
         title: "Resume Site",
-        text: "A fast public profile built to communicate skills, projects, and contact paths without making anyone open a mystery attachment.",
+        text: "A fast Astro resume site built to communicate skills, portfolio work, and contact paths without making anyone open a mystery attachment.",
         href: "https://aodom.dev",
         linkText: "Open live site",
         tags: ["Astro", "CSS", "Responsive UI"]
@@ -63,7 +71,7 @@ export const resumeContent = {
         type: "Code",
         badge: "GitHub",
         title: "Public Workbench",
-        text: "A direct path to public repositories, experiments, and shipped pieces as the portfolio fills in.",
+        text: "A direct path to public repositories, experiments, and shipped pieces as the portfolio fills in with stronger project evidence.",
         href: "https://github.com/andrewodom18",
         linkText: "View GitHub",
         tags: ["TypeScript", "Flutter", "Supabase"]
@@ -72,9 +80,9 @@ export const resumeContent = {
         type: "Next launch",
         badge: "Link slot",
         title: "App Showcase",
-        text: "A reserved home for the next mobile app, web product, or case study. Swap in the live URL when it is ready for visitors.",
+        text: "A home for the next mobile app, web product, or case study that deserves a direct portfolio link.",
         href: "#contact",
-        linkText: "Ready for a direct link",
+        linkText: "Ready for a showcase link",
         tags: ["Flutter", "RevenueCat", "Backend"],
         local: true
       }
@@ -82,44 +90,51 @@ export const resumeContent = {
   },
   experience: {
     label: "Experience",
-    title: "Built around the work, not buzzwords.",
-    summary: "Use this space for the strongest roles, launches, metrics, or technical wins. The layout is ready for concise evidence.",
+    title: "Relevant experience and working strengths.",
+    summary: "A concise role-focused view of what I can contribute on a software team.",
     items: [
       {
         meta: "Current focus",
         title: "Software Developer",
-        text: "Building mobile and web products with Flutter, Next.js, TypeScript, Supabase, subscriptions, authentication, and practical deployment workflows."
+        text: "Building mobile and web software with Flutter, Next.js, TypeScript, Supabase, authentication, subscriptions, and practical deployment workflows."
       },
       {
         meta: "Strengths",
-        title: "Product implementation",
-        text: "Turning loose requirements into clear interfaces, connected data flows, and releases that can be maintained after the first impressive demo."
+        title: "Mobile and web implementation",
+        text: "Turning loose requirements into clear interfaces, connected data flows, and releases that can be understood and improved by a team."
       },
       {
-        meta: "Next edit",
-        title: "Measurable wins",
-        text: "Add specific outcomes here: shipped features, users, revenue, reliability improvements, speed gains, or anything that proves impact."
+        meta: "Workflow",
+        title: "Deployment and maintenance",
+        text: "Working across implementation details, build steps, hosting, and release checks so software can move from local development to real use."
       }
     ]
   },
   skills: {
-    label: "Stack",
-    title: "Tools I can actually move with.",
-    summary: "The stack is intentionally practical: enough range to build complete products, not so much noise that the signal disappears.",
+    label: "Technical Skills",
+    title: "Stack I use to build and ship.",
+    summary: "The stack is intentionally practical: enough range to build complete applications without turning the resume into keyword soup.",
     items: ["Flutter", "Dart", "TypeScript", "Next.js", "React", "Supabase", "RevenueCat", "Docker"]
   },
   resume: {
-    label: "PDF-friendly",
-    title: "Need the paper version? Boldly old-school. I made one anyway.",
-    text: "Download the resume PDF, or print this page if you want the browser to do its best impression of a filing cabinet."
+    label: "Resume PDF",
+    title: "Download the resume version.",
+    text: "Use the PDF for recruiting systems, or print this page for a web-native resume view with portfolio links."
   },
   contact: {
     label: "Contact",
-    title: "Have a role, project, or useful problem?",
-    text: "Send the context, the constraints, and what success should look like. I will bring product sense, clean implementation, and a healthy suspicion of unnecessary complexity."
+    title: "Contact Andrew Odom",
+    text: "Hiring teams and recruiters can reach me directly. The portfolio links above are where I show the work; this section is the shortest path to a conversation.",
+    methods: [
+      { label: "Email", value: "hello@aodom.dev", href: "mailto:hello@aodom.dev" },
+      { label: "Phone", value: "Available on request" },
+      { label: "LinkedIn", value: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
+      { label: "GitHub", value: "github.com/andrewodom18", href: "https://github.com/andrewodom18" },
+      { label: "Website", value: "aodom.dev", href: "https://aodom.dev" }
+    ]
   },
   footer: {
-    note: "Built with Astro, plain CSS, and an unreasonable dislike of bloated resumes."
+    note: "Built with Astro and plain CSS as a focused resume and portfolio."
   }
 } as const;
 

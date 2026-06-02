@@ -19,7 +19,6 @@ body::before,
 .button-row,
 .site-footer,
 .project-top,
-.contact-links,
 .nav-cta {
   display: none !important;
 }
@@ -78,13 +77,15 @@ h3 {
 }
 
 .hero-proof,
+.hero-contact,
 .feature-grid,
 .project-grid,
 .skill-grid,
 .timeline,
 .section-grid,
 .resume-panel,
-.contact-panel {
+.contact-panel,
+.contact-links {
   display: block;
 }
 
@@ -101,12 +102,15 @@ h3 {
 }
 
 .proof-tile,
+.hero-contact-item,
 .feature-card,
 .project-card,
 .timeline-item,
 .skill-pill,
 .resume-panel,
-.contact-panel {
+.contact-panel,
+.contact-links a,
+.contact-link-static {
   min-height: 0;
   margin: 0 0 8pt;
   padding: 0;
@@ -115,6 +119,34 @@ h3 {
   background: #fff;
   color: #111;
   break-inside: avoid;
+}
+
+.hero-contact-item,
+.contact-links a,
+.contact-link-static {
+  display: block;
+  text-decoration: none;
+}
+
+.hero-contact-item span,
+.contact-links a span,
+.contact-link-static span {
+  margin-right: 4pt;
+  color: #333;
+  font-weight: 700;
+}
+
+.hero-contact-item span::after,
+.contact-links a span::after,
+.contact-link-static span::after {
+  content: ":";
+}
+
+.hero-contact-item strong,
+.contact-links a strong,
+.contact-link-static strong {
+  color: #111;
+  font-weight: 400;
 }
 
 .feature-number,

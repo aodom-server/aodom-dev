@@ -1,7 +1,7 @@
 export const resumeContent = {
   name: "Andrew Odom",
-  email: "hello@aodom.dev",
-  phone: "Available on request",
+  email: "andrewodom0@icloud.com",
+  phone: "(615) 828-7318",
   linkedInUrl: "https://www.linkedin.com/in/andrewodom18",
   githubUrl: "https://github.com/andrewodom18",
   siteUrl: "https://aodom.dev",
@@ -19,9 +19,9 @@ export const resumeContent = {
     title: "Andrew Odom, Software Developer",
     lead: "I am looking for software developer roles where I can build mobile apps, web interfaces, and backend-connected systems with clear UX and maintainable code.",
     contact: [
-      { label: "Email", text: "hello@aodom.dev", href: "mailto:hello@aodom.dev" },
+      { label: "Email", text: "andrewodom0@icloud.com", href: "mailto:andrewodom0@icloud.com" },
       { label: "LinkedIn", text: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
-      { label: "Phone", text: "Available on request" }
+      { label: "Phone", text: "(615) 828-7318", href: "tel:+16158287318" }
     ],
     actions: [
       { label: "Download resume", href: "/assets/andrew-odom-resume.pdf", variant: "primary", download: true },
@@ -126,8 +126,8 @@ export const resumeContent = {
     title: "Contact Andrew Odom",
     text: "Hiring teams and recruiters can reach me directly. The portfolio links above are where I show the work; this section is the shortest path to a conversation.",
     methods: [
-      { label: "Email", value: "hello@aodom.dev", href: "mailto:hello@aodom.dev" },
-      { label: "Phone", value: "Available on request" },
+      { label: "Email", value: "andrewodom0@icloud.com", href: "mailto:andrewodom0@icloud.com" },
+      { label: "Phone", value: "(615) 828-7318", href: "tel:+16158287318" },
       { label: "LinkedIn", value: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
       { label: "GitHub", value: "github.com/andrewodom18", href: "https://github.com/andrewodom18" },
       { label: "Website", value: "aodom.dev", href: "https://aodom.dev" }

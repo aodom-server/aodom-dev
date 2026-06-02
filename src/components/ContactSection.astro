@@ -6,6 +6,10 @@ interface Props {
 }
 
 const { content } = Astro.props;
+
+function isExternal(href?: string) {
+  return href?.startsWith("http");
+}
 ---
 
 <section class="section section-tint" id="contact">
@@ -16,8 +20,25 @@ const { content } = Astro.props;
         <h2>{content.contact.title}</h2>
         <p>{content.contact.text}</p>
         <div class="contact-links" aria-label="Contact links">
-          <a href={`mailto:${content.email}`}>{content.email}</a>
-          <a href={content.githubUrl} target="_blank" rel="noreferrer">GitHub</a>
+          {
+            content.contact.methods.map((method) =>
+              method.href ? (
+                <a
+                  href={method.href}
+                  target={isExternal(method.href) ? "_blank" : undefined}
+                  rel={isExternal(method.href) ? "noreferrer" : undefined}
+                >
+                  <span>{method.label}</span>
+                  <strong>{method.value}</strong>
+                </a>
+              ) : (
+                <span class="contact-link-static">
+                  <span>{method.label}</span>
+                  <strong>{method.value}</strong>
+                </span>
+              )
+            )
+          }
           <button type="button" data-copy-email={content.email}>Copy email</button>
         </div>
       </div>

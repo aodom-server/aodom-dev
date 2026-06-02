@@ -29,10 +29,59 @@
 }
 
 .lead {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   max-width: 590px;
   color: #303740;
   font-size: 1.2rem;
+}
+
+.hero-contact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 26px;
+  max-width: 760px;
+}
+
+.hero-contact-item {
+  display: flex;
+  min-height: 72px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 14px;
+  border: 1px solid rgba(21, 23, 25, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-contact-item span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-contact-item strong {
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+a.hero-contact-item {
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+a.hero-contact-item:hover,
+a.hero-contact-item:focus-visible {
+  border-color: rgba(15, 118, 110, 0.32);
+  background: #fff;
+  transform: translateY(-1px);
+  outline: none;
 }
 
 .hero-actions,

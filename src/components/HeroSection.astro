@@ -12,6 +12,10 @@ function buttonClass(variant?: string) {
   if (variant === "accent") return "button button-accent";
   return "button";
 }
+
+function isExternal(href?: string) {
+  return href?.startsWith("http");
+}
 ---
 
 <section class="hero" id="top">
@@ -20,12 +24,36 @@ function buttonClass(variant?: string) {
       <p class="eyebrow">{hero.eyebrow}</p>
       <h1>{hero.title}</h1>
       <p class="lead">{hero.lead}</p>
+      <div class="hero-contact" aria-label="Resume contact details">
+        {
+          hero.contact.map((item) =>
+            item.href ? (
+              <a
+                class="hero-contact-item"
+                href={item.href}
+                target={isExternal(item.href) ? "_blank" : undefined}
+                rel={isExternal(item.href) ? "noreferrer" : undefined}
+              >
+                <span>{item.label}</span>
+                <strong>{item.text}</strong>
+              </a>
+            ) : (
+              <span class="hero-contact-item">
+                <span>{item.label}</span>
+                <strong>{item.text}</strong>
+              </span>
+            )
+          )
+        }
+      </div>
       <div class="hero-actions" aria-label="Primary actions">
         {
           hero.actions.map((action) => (
             <a
               class={buttonClass(action.variant)}
               href={action.href}
+              target={isExternal(action.href) ? "_blank" : undefined}
+              rel={isExternal(action.href) ? "noreferrer" : undefined}
               {...(action.download ? { download: true } : {})}
             >
               {action.label}

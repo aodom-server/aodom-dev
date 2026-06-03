@@ -15,7 +15,7 @@ const { content } = Astro.props;
       <span>{content.footer.note}</span>
       {
         content.footer.links.map((link) => (
-          <a class="font-bold text-teal-deep underline-offset-4 hover:underline" href={link.href} target="_blank" rel="noreferrer">
+          <a class="font-bold text-teal-deep underline-offset-4 hover:underline" href={link.href} target="_blank" rel="noopener noreferrer">
             {link.label}
           </a>
         ))

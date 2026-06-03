@@ -51,7 +51,7 @@ function isExternal(href?: string) {
               class={`${buttonClass(action.variant)} w-full sm:w-auto`}
               href={action.href}
               target={isExternal(action.href) ? "_blank" : undefined}
-              rel={isExternal(action.href) ? "noreferrer" : undefined}
+              rel={isExternal(action.href) ? "noopener noreferrer" : undefined}
               {...(action.download ? { download: true } : {})}
             >
               {action.label}

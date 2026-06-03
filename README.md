@@ -1,8 +1,6 @@
 # aodom.dev Resume Site
 
-My public resume site.
-
-*It somewhat proves I can program...*
+Public QR resume site for hiring conversations and portfolio context.
 
 ## Stack
 

@@ -15,7 +15,7 @@ export const resumeContent = {
     actions: [
       { label: "Review experience", href: "#experience", variant: "primary" },
       { label: "View work samples", href: "#work", variant: "accent" },
-      { label: "Contact form", href: "#contact" }
+      { label: "Contact", href: "#contact" }
     ],
     credentials: [
       { label: "Current role", text: "Software Developer, BESPIN" },
@@ -85,15 +85,9 @@ export const resumeContent = {
   },
   contact: {
     label: "Contact",
-    title: "Share your info.",
-    text: "This form will collect visitor details once it is connected.",
-    note: "Preview mode. Nothing is sent yet.",
-    fields: [
-      { id: "name", label: "Name", type: "text", placeholder: "Your name" },
-      { id: "email", label: "Email", type: "email", placeholder: "you@example.com" },
-      { id: "organization", label: "Organization", type: "text", placeholder: "Company or team" },
-      { id: "message", label: "Message", type: "textarea", placeholder: "Role, project, or reason for reaching out." }
-    ]
+    title: "Contact.",
+    text: "Use the contact details on my card or the channel where I shared this QR resume.",
+    note: "Direct email, phone, and profile links stay off the public page for now."
   },
   footer: {
     note: "Resume-first portfolio for QR scans and hiring conversations.",

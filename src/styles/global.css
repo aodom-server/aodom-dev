@@ -61,6 +61,7 @@ body {
   #resume,
   #contact,
   #top [aria-label="Primary actions"],
+  #top [aria-label="Resume highlights"],
   #top > div[aria-hidden="true"] {
     display: none !important;
   }
@@ -68,8 +69,12 @@ body {
   main > section {
     background: #fff !important;
     border: 0 !important;
-    break-inside: avoid;
+    break-inside: auto;
     padding-block: 0.18in !important;
+  }
+
+  article {
+    break-inside: avoid;
   }
 
   #top > div:last-child {

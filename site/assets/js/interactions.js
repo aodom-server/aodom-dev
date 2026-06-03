@@ -42,13 +42,4 @@
     window.print();
   });
 
-  document.querySelector("[data-contact-form]")?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const status = form.querySelector("[data-form-status]");
-
-    if (status) {
-      status.textContent = "Preview ready. The form is not connected yet.";
-    }
-  });
 })();

@@ -10,9 +10,9 @@ export const resumeContent = {
     { label: "Contact", href: "#contact" }
   ],
   hero: {
-    eyebrow: "QR resume | BESPIN | Computer Science",
-    title: "Andrew Odom, software developer.",
-    lead: "Air Force software developer at BESPIN since December 2023. Building mobile software while completing a bachelor's in Computer Science and planning a master's in Cybersecurity.",
+    eyebrow: "QR resume | CS student",
+    title: "Andrew Odom",
+    lead: "Software developer at BESPIN. Since Dec 2023. CS bachelor's in progress. Cybersecurity master's planned.",
     actions: [
       { label: "Review experience", href: "#experience", variant: "primary" },
       { label: "View work samples", href: "#work", variant: "accent" },
@@ -21,12 +21,12 @@ export const resumeContent = {
     credentials: [
       { label: "Current role", text: "Software Developer, BESPIN" },
       { label: "Since", text: "December 2023" },
-      { label: "Education", text: "Computer Science bachelor's in progress" }
+      { label: "Education", text: "CS bachelor's in progress" }
     ]
   },
   profile: {
     label: "Snapshot",
-    title: "Mobile developer. CS student. Security path.",
+    title: "Developer. Student. Security path.",
     summary: "A scan-friendly resume for quick hiring conversations.",
     features: [
       {
@@ -61,9 +61,9 @@ export const resumeContent = {
     ]
   },
   work: {
-    label: "Selected Work",
-    title: "A few things I can show.",
-    summary: "Simple placeholders for websites, apps, and safe case studies as they become public.",
+    label: "Portfolio",
+    title: "Work samples.",
+    summary: "Public samples will be added as they are safe to share.",
     cards: [
       {
         type: "Website",
@@ -71,7 +71,7 @@ export const resumeContent = {
         title: "Resume Site",
         text: "Fast Astro resume site with responsive layout and clean presentation.",
         href: "#contact",
-        linkText: "Link placeholder",
+        linkText: "Coming soon",
         tags: ["Astro", "Tailwind", "Responsive UI"],
         local: true
       },
@@ -81,7 +81,7 @@ export const resumeContent = {
         title: "Mobile App Sample",
         text: "Reserved for a safe mobile app or case study.",
         href: "#contact",
-        linkText: "Case study placeholder",
+        linkText: "Case study soon",
         tags: ["Flutter", "Dart", "Mobile UX"],
         local: true
       }
@@ -118,13 +118,13 @@ export const resumeContent = {
   resume: {
     label: "Resume Note",
     title: "Business-card QR resume.",
-    text: "This page is the public resume for QR scans. The PDF is temporarily removed while contact details are sanitized."
+    text: "This page is the public resume for QR scans. Use print for a paper copy while private contact details stay off the page."
   },
   contact: {
-    label: "Contact Form",
-    title: "Leave your info.",
-    text: "Use this form to share your details once the private endpoint is connected.",
-    note: "Preview only. Messages are not sent yet.",
+    label: "Contact",
+    title: "Share your info.",
+    text: "This form will collect visitor details once it is connected.",
+    note: "Preview mode. Nothing is sent yet.",
     fields: [
       { id: "name", label: "Name", type: "text", placeholder: "Your name" },
       { id: "email", label: "Email", type: "email", placeholder: "you@example.com" },
@@ -133,7 +133,7 @@ export const resumeContent = {
     ]
   },
   footer: {
-    note: "Resume-first portfolio. Contact details are intentionally placeholder-only for now."
+    note: "Resume-first portfolio for QR scans and hiring conversations."
   }
 } as const;
 

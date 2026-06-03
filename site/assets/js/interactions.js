@@ -48,7 +48,7 @@
     const status = form.querySelector("[data-form-status]");
 
     if (status) {
-      status.textContent = "Preview ready. A private endpoint still needs to be connected.";
+      status.textContent = "Preview ready. The form is not connected yet.";
     }
   });
 })();

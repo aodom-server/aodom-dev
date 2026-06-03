@@ -20,6 +20,11 @@ body {
   font-family: var(--font-sans);
 }
 
+.reveal:not([data-visible="true"]) {
+  opacity: 1 !important;
+  translate: 0 0 !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

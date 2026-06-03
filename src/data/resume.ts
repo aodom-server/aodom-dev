@@ -2,7 +2,6 @@ export const resumeContent = {
   name: "Andrew Odom",
   siteUrl: "https://aodom.dev",
   nav: [
-    { label: "Snapshot", href: "#snapshot" },
     { label: "Experience", href: "#experience" },
     { label: "Education", href: "#education" },
     { label: "Skills", href: "#skills" },
@@ -22,25 +21,6 @@ export const resumeContent = {
       { label: "Current role", text: "Software Developer, BESPIN" },
       { label: "Since", text: "December 2023" },
       { label: "Education", text: "CS bachelor's in progress" }
-    ]
-  },
-  profile: {
-    label: "Snapshot",
-    title: "Developer. Student. Security path.",
-    summary: "A scan-friendly resume for quick hiring conversations.",
-    features: [
-      {
-        title: "Current role",
-        text: "Software Developer at Air Force BESPIN."
-      },
-      {
-        title: "Education",
-        text: "Computer Science bachelor's in progress."
-      },
-      {
-        title: "Direction",
-        text: "Planned Cybersecurity master's path."
-      }
     ]
   },
   education: {

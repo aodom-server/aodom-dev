@@ -43,12 +43,34 @@ export const resumeContent = {
   work: {
     label: "Portfolio",
     title: "Project range.",
-    summary: "Most code is private or organization-owned; the work still has clear signals.",
+    summary: "Public profile data plus private and organization work signals.",
     note: {
       title: "Private code. Public pattern.",
       text: "Recent project history points to TypeScript web apps, Flutter mobile apps, data cleanup tools, realtime browser work, and server automation. I can discuss scope and decisions without exposing protected code.",
       tags: ["TypeScript apps", "Flutter apps", "Automation"]
-    }
+    },
+    insights: [
+      {
+        meta: "Public repo",
+        title: "GitHub profile README",
+        text: "The public profile repo documents stack, working style, and private/org project signals without exposing protected code.",
+        href: "https://github.com/andrewodom18/andrewodom18",
+        linkText: "View repo",
+        tags: ["Profile README", "Stack notes", "Working style"]
+      },
+      {
+        meta: "Repo footprint",
+        title: "Private and org work",
+        text: "The profile snapshot references 15 accessible repos, including private, organization, and collaboration work.",
+        tags: ["Private repos", "Org work", "Recent activity"]
+      },
+      {
+        meta: "Product surface",
+        title: "What the repo points to",
+        text: "Full-stack web apps, Flutter mobile apps, realtime browser experiences, data tools, Supabase products, Home Assistant config, and server automation.",
+        tags: ["Web apps", "Flutter", "Automation"]
+      }
+    ]
   },
   experience: {
     label: "Work Experience",

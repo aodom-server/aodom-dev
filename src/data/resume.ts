@@ -42,12 +42,12 @@ export const resumeContent = {
   },
   work: {
     label: "Portfolio",
-    title: "Public work.",
-    summary: "Only samples that can be shared cleanly belong here.",
+    title: "Project range.",
+    summary: "Most code is private or organization-owned; the work still has clear signals.",
     note: {
-      title: "No protected work.",
-      text: "This section is for public-safe projects and case studies. It will stay separate from internal systems, private details, and anything that should not be shown in a hiring conversation.",
-      tags: ["Mobile apps", "Web UI", "Case studies"]
+      title: "Private code. Public pattern.",
+      text: "Recent project history points to TypeScript web apps, Flutter mobile apps, data cleanup tools, realtime browser work, and server automation. I can discuss scope and decisions without exposing protected code.",
+      tags: ["TypeScript apps", "Flutter apps", "Automation"]
     }
   },
   experience: {
@@ -63,20 +63,20 @@ export const resumeContent = {
       {
         meta: "Mobile software factory",
         title: "Mobile delivery",
-        text: "Building with maintainable code, clear interfaces, review, and release-minded implementation."
+        text: "Building mobile workflows with maintainable code, clear interfaces, review, and release-minded implementation."
       },
       {
-        meta: "Engineering habits",
-        title: "Readable work",
-        text: "Scoped changes, documented decisions, and responsive user workflows."
+        meta: "Project range",
+        title: "Web, data, and automation",
+        text: "Recent work and private projects span full-stack web apps, Flutter apps, data cleanup systems, realtime browser experiences, and server automation."
       }
     ]
   },
   skills: {
     label: "Technical Skills",
     title: "Practical stack.",
-    summary: "Mobile, web, and security fundamentals.",
-    items: ["Mobile Development", "Flutter", "Dart", "TypeScript", "React", "Responsive UI", "APIs", "Security Fundamentals", "Docker", "Technical Writing"]
+    summary: "Mobile, web, data, automation, and security fundamentals.",
+    items: ["TypeScript", "Dart", "Python", "Flutter", "React", "Next.js", "Astro", "Tailwind CSS", "Supabase", "SQL", "Docker", "GitHub Actions"]
   },
   resume: {
     label: "Resume Note",

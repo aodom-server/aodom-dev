@@ -42,30 +42,13 @@ export const resumeContent = {
   },
   work: {
     label: "Portfolio",
-    title: "Work samples.",
-    summary: "Public samples will be added as they are safe to share.",
-    cards: [
-      {
-        type: "Website",
-        badge: "Site",
-        title: "Resume Site",
-        text: "Fast Astro resume site with responsive layout and clean presentation.",
-        href: "#contact",
-        linkText: "Coming soon",
-        tags: ["Astro", "Tailwind", "Responsive UI"],
-        local: true
-      },
-      {
-        type: "Mobile app",
-        badge: "App",
-        title: "Mobile App Sample",
-        text: "Reserved for a safe mobile app or case study.",
-        href: "#contact",
-        linkText: "Case study soon",
-        tags: ["Flutter", "Dart", "Mobile UX"],
-        local: true
-      }
-    ]
+    title: "Public work.",
+    summary: "Only samples that can be shared cleanly belong here.",
+    note: {
+      title: "No protected work.",
+      text: "This section is for public-safe projects and case studies. It will stay separate from internal systems, private details, and anything that should not be shown in a hiring conversation.",
+      tags: ["Mobile apps", "Web UI", "Case studies"]
+    }
   },
   experience: {
     label: "Work Experience",

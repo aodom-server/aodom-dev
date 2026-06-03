@@ -7,17 +7,17 @@ export const resumeContent = {
   siteUrl: "https://aodom.dev",
   pdfPath: "/assets/andrew-odom-resume.pdf",
   nav: [
-    { label: "Profile", href: "#profile" },
-    { label: "Portfolio", href: "#work" },
+    { label: "Education", href: "#profile" },
     { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
+    { label: "Portfolio", href: "#work" },
     { label: "Resume PDF", href: "#resume" },
     { label: "Contact", href: "#contact" }
   ],
   hero: {
-    eyebrow: "Resume | software developer | mobile and web",
-    title: "Andrew Odom, Software Developer",
-    lead: "I am looking for software developer roles where I can build mobile apps, web interfaces, and backend-connected systems with clear UX and maintainable code.",
+    eyebrow: "Resume | Computer Science | Cybersecurity path",
+    title: "Andrew Odom",
+    lead: "I am working on my bachelor's degree in Computer Science and planning to continue into a master's in Cybersecurity. This site is a resume-first view of my education, work experience, technical skills, and selected projects.",
     contact: [
       { label: "Email", text: "andrewodom0@icloud.com", href: "mailto:andrewodom0@icloud.com" },
       { label: "LinkedIn", text: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
@@ -25,44 +25,44 @@ export const resumeContent = {
     ],
     actions: [
       { label: "Download resume", href: "/assets/andrew-odom-resume.pdf", variant: "primary", download: true },
-      { label: "View portfolio", href: "#work" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/andrewodom18", variant: "accent" }
+      { label: "Review experience", href: "#experience" },
+      { label: "View portfolio", href: "#work", variant: "accent" }
     ],
     proof: [
-      { label: "Open to", text: "Software developer roles in mobile, web, or full-stack teams." },
-      { label: "Build range", text: "Flutter apps, TypeScript interfaces, Supabase-backed workflows." },
-      { label: "Working style", text: "Readable code, practical releases, and focused product judgment." }
+      { label: "Education", text: "Bachelor's in Computer Science in progress." },
+      { label: "Graduate goal", text: "Planned master's focus in Cybersecurity." },
+      { label: "Portfolio role", text: "Projects are included as skill evidence." }
     ]
   },
   profile: {
-    label: "Resume Profile",
-    title: "Software developer focused on useful, maintainable applications.",
-    summary: "This page is the quick resume view: what I build, how I work, and where to find the portfolio pieces that prove it.",
+    label: "Education",
+    title: "Computer science foundation with a cybersecurity direction.",
+    summary: "My academic path is centered on software fundamentals now and security depth next: a bachelor's in Computer Science followed by a planned master's in Cybersecurity.",
     features: [
       {
-        title: "Mobile and web UI",
-        text: "I build clean user flows for app and web experiences, with attention to responsive layouts, state, and the path from first click to finished task."
+        title: "Bachelor's in Computer Science",
+        text: "Currently working through the degree path with emphasis on programming fundamentals, systems thinking, data, and practical software development."
       },
       {
-        title: "Backend-connected work",
-        text: "I can connect the visible experience to auth, data, subscriptions, hosting, and the operational details that keep a product usable."
+        title: "Cybersecurity master's plan",
+        text: "After the bachelor's, my goal is to continue into graduate study focused on cybersecurity, secure systems, and risk-aware engineering."
       },
       {
-        title: "Maintainable delivery",
-        text: "I prefer readable code, small moving parts, and releases that stay understandable after the first demo."
+        title: "Applied learning",
+        text: "The portfolio exists to show how coursework and independent practice become working software, readable code, and documented decisions."
       }
     ]
   },
   work: {
     label: "Portfolio",
-    title: "Selected work and proof-of-build.",
-    summary: "This is the showcase side of the site. Portfolio cards should point hiring teams to live work, code, app launches, or short case studies.",
+    title: "Selected projects as skill evidence.",
+    summary: "This section is a skills showcase: working examples, code, and case-study notes that help employers evaluate my technical range.",
     cards: [
       {
         type: "Website",
         badge: "Live",
         title: "Resume Site",
-        text: "A fast Astro resume site built to communicate skills, portfolio work, and contact paths without making anyone open a mystery attachment.",
+        text: "A personal Astro resume site that organizes education, experience, contact info, and selected project evidence in one accessible place.",
         href: "https://aodom.dev",
         linkText: "Open live site",
         tags: ["Astro", "CSS", "Responsive UI"]
@@ -71,7 +71,7 @@ export const resumeContent = {
         type: "Code",
         badge: "GitHub",
         title: "Public Workbench",
-        text: "A direct path to public repositories, experiments, and shipped pieces as the portfolio fills in with stronger project evidence.",
+        text: "Public repositories and experiments that show coding practice, technical range, and progress across application ideas.",
         href: "https://github.com/andrewodom18",
         linkText: "View GitHub",
         tags: ["TypeScript", "Flutter", "Supabase"]
@@ -80,51 +80,51 @@ export const resumeContent = {
         type: "Next launch",
         badge: "Link slot",
         title: "App Showcase",
-        text: "A home for the next mobile app, web product, or case study that deserves a direct portfolio link.",
+        text: "A placeholder for a completed app, school project, or case study that deserves a direct portfolio link once it is ready.",
         href: "#contact",
-        linkText: "Ready for a showcase link",
+        linkText: "Portfolio slot",
         tags: ["Flutter", "RevenueCat", "Backend"],
         local: true
       }
     ]
   },
   experience: {
-    label: "Experience",
-    title: "Relevant experience and working strengths.",
-    summary: "A concise role-focused view of what I can contribute on a software team.",
+    label: "Work Experience",
+    title: "Past work experience and development practice.",
+    summary: "A focused resume view of practical work habits, implementation experience, and the kind of team contribution I am building toward.",
     items: [
       {
-        meta: "Current focus",
-        title: "Software Developer",
-        text: "Building mobile and web software with Flutter, Next.js, TypeScript, Supabase, authentication, subscriptions, and practical deployment workflows."
+        meta: "Development practice",
+        title: "Software and technical work",
+        text: "Building mobile and web software with Flutter, TypeScript, Supabase, authentication, subscriptions, and practical deployment workflows."
       },
       {
-        meta: "Strengths",
-        title: "Mobile and web implementation",
-        text: "Turning loose requirements into clear interfaces, connected data flows, and releases that can be understood and improved by a team."
+        meta: "Past work habits",
+        title: "Implementation and follow-through",
+        text: "Carrying tasks from requirements through interface decisions, data flow, testing checks, and release-ready updates."
       },
       {
-        meta: "Workflow",
-        title: "Deployment and maintenance",
-        text: "Working across implementation details, build steps, hosting, and release checks so software can move from local development to real use."
+        meta: "Team value",
+        title: "Maintainable work",
+        text: "Keeping code readable, changes scoped, and decisions understandable so projects are easier to review and improve."
       }
     ]
   },
   skills: {
     label: "Technical Skills",
-    title: "Stack I use to build and ship.",
-    summary: "The stack is intentionally practical: enough range to build complete applications without turning the resume into keyword soup.",
-    items: ["Flutter", "Dart", "TypeScript", "Next.js", "React", "Supabase", "RevenueCat", "Docker"]
+    title: "Technical tools supporting the resume.",
+    summary: "Skills are listed as supporting evidence for education, experience, and portfolio projects.",
+    items: ["Computer Science", "Security Fundamentals", "Flutter", "Dart", "TypeScript", "React", "Supabase", "Docker"]
   },
   resume: {
     label: "Resume PDF",
     title: "Download the resume version.",
-    text: "Use the PDF for recruiting systems, or print this page for a web-native resume view with portfolio links."
+    text: "Use the PDF for recruiting systems. This web page is the readable resume view, with portfolio links kept separate as supporting project evidence."
   },
   contact: {
     label: "Contact",
     title: "Contact Andrew Odom",
-    text: "Hiring teams and recruiters can reach me directly. The portfolio links above are where I show the work; this section is the shortest path to a conversation.",
+    text: "Reach out about roles, internships, or recruiting conversations. The portfolio section is only for reviewing examples of work and skill growth.",
     methods: [
       { label: "Email", value: "andrewodom0@icloud.com", href: "mailto:andrewodom0@icloud.com" },
       { label: "Phone", value: "(615) 828-7318", href: "tel:+16158287318" },
@@ -134,7 +134,7 @@ export const resumeContent = {
     ]
   },
   footer: {
-    note: "Built with Astro and plain CSS as a focused resume and portfolio."
+    note: "Built with Astro and plain CSS as a resume-first portfolio."
   }
 } as const;
 

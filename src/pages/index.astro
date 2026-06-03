@@ -11,8 +11,8 @@ import WorkSection from "../components/WorkSection.astro";
 import { resumeContent } from "../data/resume";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "Andrew Odom | Software Developer";
-const pageDescription = "Resume, project profile, and selected work for Andrew Odom, a software developer building mobile apps, web apps, and backend-connected products.";
+const pageTitle = "Andrew Odom | Computer Science Resume";
+const pageDescription = "Resume-focused site for Andrew Odom, a Computer Science student planning graduate study in Cybersecurity, with education, work experience, skills, and selected project evidence.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} email={resumeContent.email}>
@@ -23,9 +23,9 @@ const pageDescription = "Resume, project profile, and selected work for Andrew O
   <main id="main">
     <HeroSection hero={resumeContent.hero} />
     <ProfileSection profile={resumeContent.profile} />
-    <WorkSection work={resumeContent.work} />
     <ExperienceSection experience={resumeContent.experience} />
     <SkillsSection skills={resumeContent.skills} />
+    <WorkSection work={resumeContent.work} />
     <ResumeDownloadSection content={resumeContent} />
     <ContactSection content={resumeContent} />
   </main>

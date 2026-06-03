@@ -39,3 +39,70 @@ body {
     transition-duration: 0.001ms !important;
   }
 }
+
+@media print {
+  @page {
+    margin: 0.55in;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 10.5pt;
+  }
+
+  header,
+  footer,
+  #work,
+  #resume,
+  #contact,
+  #top [aria-label="Primary actions"],
+  #top > div[aria-hidden="true"] {
+    display: none !important;
+  }
+
+  main > section {
+    background: #fff !important;
+    border: 0 !important;
+    break-inside: avoid;
+    padding-block: 0.18in !important;
+  }
+
+  #top > div:last-child {
+    min-height: auto !important;
+    padding-block: 0 0.18in !important;
+    width: 100% !important;
+  }
+
+  .reveal,
+  .reveal:not([data-visible="true"]) {
+    opacity: 1 !important;
+    translate: 0 0 !important;
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  h1 {
+    font-size: 30pt !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+  }
+
+  h3 {
+    font-size: 12pt !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}

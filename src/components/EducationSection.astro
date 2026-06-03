@@ -1,0 +1,29 @@
+---
+import SectionIntro from "./SectionIntro.astro";
+import type { ResumeContent } from "../data/resume";
+
+interface Props {
+  education: ResumeContent["education"];
+}
+
+const { education } = Astro.props;
+---
+
+<section class="bg-white py-16 sm:py-24" id="education">
+  <div class="mx-auto grid w-[min(1160px,calc(100%-1.75rem))] gap-10 lg:grid-cols-[1fr_minmax(320px,0.78fr)] lg:items-start">
+    <SectionIntro section={education} />
+    <div class="grid gap-4 lg:pt-10">
+      {
+        education.items.map((item) => (
+          <article class="reveal rounded-lg border border-black/10 bg-[linear-gradient(135deg,rgba(15,118,110,0.08),rgba(37,87,167,0.06))] p-6 shadow-xl shadow-black/5 opacity-0 translate-y-5 transition-all duration-700 ease-out data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100">
+            <div class="mb-4 inline-flex rounded-full bg-white/85 px-3 py-1 text-xs font-black uppercase tracking-[0.08em] text-teal-deep">{item.meta}</div>
+            <div>
+              <h3 class="mb-3 text-2xl font-black leading-tight">{item.title}</h3>
+              <p class="leading-7 text-muted">{item.text}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

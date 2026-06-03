@@ -9,15 +9,15 @@ interface Props {
 const { skills } = Astro.props;
 ---
 
-<section class="section section-tint" id="skills">
-  <div class="section-inner section-grid">
+<section class="bg-paper py-16 sm:py-24" id="skills">
+  <div class="mx-auto grid w-[min(1160px,calc(100%-1.75rem))] gap-10 lg:grid-cols-[minmax(260px,0.34fr)_1fr]">
     <SectionIntro section={skills} />
-    <div class="skill-grid" aria-label="Technical skills">
+    <div class="flex flex-wrap content-start gap-3" aria-label="Technical skills">
       {
         skills.items.map((skill) => (
-          <div class="skill-pill reveal">
+          <div class="reveal inline-flex min-h-12 items-center gap-3 rounded-full border border-black/10 bg-white px-4 text-sm font-black shadow-lg shadow-black/5 opacity-0 translate-y-5 transition-all duration-700 ease-out data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100 sm:text-base">
             {skill}
-            <span class="skill-dot" aria-hidden="true"></span>
+            <span class="size-2 rounded-full bg-coral" aria-hidden="true"></span>
           </div>
         ))
       }

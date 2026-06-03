@@ -8,9 +8,10 @@ interface Props {
 const { hero } = Astro.props;
 
 function buttonClass(variant?: string) {
-  if (variant === "primary") return "button button-primary";
-  if (variant === "accent") return "button button-accent";
-  return "button";
+  const base = "inline-flex min-h-12 items-center justify-center rounded-lg px-5 text-center font-black no-underline transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal";
+  if (variant === "primary") return `${base} border border-ink bg-ink text-white shadow-xl shadow-black/10`;
+  if (variant === "accent") return `${base} border border-coral/50 bg-white/90 text-[#8f2f21]`;
+  return `${base} border border-black/15 bg-white/90 text-ink`;
 }
 
 function isExternal(href?: string) {
@@ -18,39 +19,29 @@ function isExternal(href?: string) {
 }
 ---
 
-<section class="hero" id="top">
-  <div class="hero-inner">
-    <div class="hero-copy reveal">
-      <p class="eyebrow">{hero.eyebrow}</p>
-      <h1>{hero.title}</h1>
-      <p class="lead">{hero.lead}</p>
-      <div class="hero-contact" aria-label="Resume contact details">
-        {
-          hero.contact.map((item) =>
-            item.href ? (
-              <a
-                class="hero-contact-item"
-                href={item.href}
-                target={isExternal(item.href) ? "_blank" : undefined}
-                rel={isExternal(item.href) ? "noreferrer" : undefined}
-              >
-                <span>{item.label}</span>
-                <strong>{item.text}</strong>
-              </a>
-            ) : (
-              <span class="hero-contact-item">
-                <span>{item.label}</span>
-                <strong>{item.text}</strong>
-              </span>
-            )
-          )
-        }
-      </div>
-      <div class="hero-actions" aria-label="Primary actions">
+<section
+  class="relative isolate overflow-hidden border-b border-black/10 bg-paper"
+  id="top"
+>
+  <div
+    class="absolute inset-0 -z-20 bg-cover bg-[center_right_22%] opacity-55 md:opacity-80"
+    style="background-image: url('/assets/hero-workbench.png');"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#f6f2ea_0%,rgba(246,242,234,0.96)_36%,rgba(246,242,234,0.62)_68%,rgba(246,242,234,0.22)_100%)] md:bg-[linear-gradient(90deg,#f6f2ea_0%,rgba(246,242,234,0.95)_38%,rgba(246,242,234,0.35)_73%,rgba(246,242,234,0.08)_100%)]"
+    aria-hidden="true"
+  ></div>
+  <div class="mx-auto grid min-h-[calc(100svh-4rem)] w-[min(1160px,calc(100%-1.75rem))] items-center py-14 md:min-h-[700px] md:py-20">
+    <div class="reveal max-w-3xl opacity-0 translate-y-5 transition-all duration-700 ease-out data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100">
+      <p class="mb-4 text-sm font-black uppercase tracking-[0.08em] text-teal-deep">{hero.eyebrow}</p>
+      <h1 class="mb-6 text-balance text-4xl font-black leading-[0.96] tracking-normal text-ink sm:text-6xl lg:text-7xl">{hero.title}</h1>
+      <p class="mb-8 max-w-2xl text-lg leading-8 text-slate-700 sm:text-xl">{hero.lead}</p>
+      <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap" aria-label="Primary actions">
         {
           hero.actions.map((action) => (
             <a
-              class={buttonClass(action.variant)}
+              class={`${buttonClass(action.variant)} w-full sm:w-auto`}
               href={action.href}
               target={isExternal(action.href) ? "_blank" : undefined}
               rel={isExternal(action.href) ? "noreferrer" : undefined}
@@ -61,12 +52,12 @@ function isExternal(href?: string) {
           ))
         }
       </div>
-      <div class="hero-proof" aria-label="Highlights">
+      <div class="mt-10 grid gap-3 sm:grid-cols-3" aria-label="Resume highlights">
         {
-          hero.proof.map((item) => (
-            <div class="proof-tile">
-              <span class="proof-kicker">{item.label}</span>
-              <strong>{item.text}</strong>
+          hero.credentials.map((item) => (
+            <div class="rounded-lg border border-black/10 bg-white/80 p-4 shadow-xl shadow-black/5 backdrop-blur">
+              <span class="mb-2 block text-xs font-black uppercase tracking-[0.08em] text-muted">{item.label}</span>
+              <strong class="block text-base leading-snug text-ink">{item.text}</strong>
             </div>
           ))
         }

@@ -9,7 +9,7 @@
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
+          entry.target.dataset.visible = "true";
           revealObserver.unobserve(entry.target);
         }
       });
@@ -21,31 +21,34 @@
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         sectionLinks.forEach((link) => {
-          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+          const isCurrent = link.getAttribute("href") === `#${entry.target.id}`;
+          if (isCurrent) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
         });
       });
     }, { rootMargin: "-35% 0px -50% 0px", threshold: 0.01 });
 
     sections.forEach((section) => sectionObserver.observe(section));
   } else {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
+    revealItems.forEach((item) => {
+      item.dataset.visible = "true";
+    });
   }
 
   document.querySelector("[data-print]")?.addEventListener("click", () => {
     window.print();
   });
 
-  document.querySelector("[data-copy-email]")?.addEventListener("click", async (event) => {
-    const button = event.currentTarget;
-    const email = button.getAttribute("data-copy-email") || document.body.dataset.email;
+  document.querySelector("[data-contact-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const status = form.querySelector("[data-form-status]");
 
-    if (!email) return;
-
-    try {
-      await navigator.clipboard.writeText(email);
-      button.textContent = "Email copied";
-    } catch {
-      window.location.href = `mailto:${email}`;
+    if (status) {
+      status.textContent = "Preview ready. A private endpoint still needs to be connected.";
     }
   });
 })();

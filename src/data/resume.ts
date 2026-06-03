@@ -1,140 +1,139 @@
 export const resumeContent = {
   name: "Andrew Odom",
-  email: "andrewodom0@icloud.com",
-  phone: "(615) 828-7318",
-  linkedInUrl: "https://www.linkedin.com/in/andrewodom18",
-  githubUrl: "https://github.com/andrewodom18",
   siteUrl: "https://aodom.dev",
-  pdfPath: "/assets/andrew-odom-resume.pdf",
   nav: [
-    { label: "Education", href: "#profile" },
+    { label: "Snapshot", href: "#snapshot" },
     { label: "Experience", href: "#experience" },
+    { label: "Education", href: "#education" },
     { label: "Skills", href: "#skills" },
-    { label: "Portfolio", href: "#work" },
-    { label: "Resume PDF", href: "#resume" },
+    { label: "Work", href: "#work" },
     { label: "Contact", href: "#contact" }
   ],
   hero: {
-    eyebrow: "Resume | Computer Science | Cybersecurity path",
-    title: "Andrew Odom",
-    lead: "I am working on my bachelor's degree in Computer Science and planning to continue into a master's in Cybersecurity. This site is a resume-first view of my education, work experience, technical skills, and selected projects.",
-    contact: [
-      { label: "Email", text: "andrewodom0@icloud.com", href: "mailto:andrewodom0@icloud.com" },
-      { label: "LinkedIn", text: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
-      { label: "Phone", text: "(615) 828-7318", href: "tel:+16158287318" }
-    ],
+    eyebrow: "QR resume | BESPIN | Computer Science",
+    title: "Andrew Odom, software developer.",
+    lead: "Air Force software developer at BESPIN since December 2023. Building mobile software while completing a bachelor's in Computer Science and planning a master's in Cybersecurity.",
     actions: [
-      { label: "Download resume", href: "/assets/andrew-odom-resume.pdf", variant: "primary", download: true },
-      { label: "Review experience", href: "#experience" },
-      { label: "View portfolio", href: "#work", variant: "accent" }
+      { label: "Review experience", href: "#experience", variant: "primary" },
+      { label: "View work samples", href: "#work", variant: "accent" },
+      { label: "Contact form", href: "#contact" }
     ],
-    proof: [
-      { label: "Education", text: "Bachelor's in Computer Science in progress." },
-      { label: "Graduate goal", text: "Planned master's focus in Cybersecurity." },
-      { label: "Portfolio role", text: "Projects are included as skill evidence." }
+    credentials: [
+      { label: "Current role", text: "Software Developer, BESPIN" },
+      { label: "Since", text: "December 2023" },
+      { label: "Education", text: "Computer Science bachelor's in progress" }
     ]
   },
   profile: {
-    label: "Education",
-    title: "Computer science foundation with a cybersecurity direction.",
-    summary: "My academic path is centered on software fundamentals now and security depth next: a bachelor's in Computer Science followed by a planned master's in Cybersecurity.",
+    label: "Snapshot",
+    title: "Mobile developer. CS student. Security path.",
+    summary: "A scan-friendly resume for quick hiring conversations.",
     features: [
       {
+        title: "Current role",
+        text: "Software Developer at Air Force BESPIN."
+      },
+      {
+        title: "Education",
+        text: "Computer Science bachelor's in progress."
+      },
+      {
+        title: "Direction",
+        text: "Planned Cybersecurity master's path."
+      }
+    ]
+  },
+  education: {
+    label: "Education",
+    title: "Computer Science now. Cybersecurity next.",
+    summary: "Focused on fundamentals, mobile systems, and security-minded development.",
+    items: [
+      {
+        meta: "In progress",
         title: "Bachelor's in Computer Science",
-        text: "Currently working through the degree path with emphasis on programming fundamentals, systems thinking, data, and practical software development."
+        text: "Programming fundamentals, systems thinking, data, architecture, and practical software."
       },
       {
-        title: "Cybersecurity master's plan",
-        text: "After the bachelor's, my goal is to continue into graduate study focused on cybersecurity, secure systems, and risk-aware engineering."
-      },
-      {
-        title: "Applied learning",
-        text: "The portfolio exists to show how coursework and independent practice become working software, readable code, and documented decisions."
+        meta: "Planned",
+        title: "Master's in Cybersecurity",
+        text: "Next goal: secure systems, risk-aware engineering, and defense-minded software."
       }
     ]
   },
   work: {
-    label: "Portfolio",
-    title: "Selected projects as skill evidence.",
-    summary: "This section is a skills showcase: working examples, code, and case-study notes that help employers evaluate my technical range.",
+    label: "Selected Work",
+    title: "A few things I can show.",
+    summary: "Simple placeholders for websites, apps, and safe case studies as they become public.",
     cards: [
       {
         type: "Website",
-        badge: "Live",
+        badge: "Site",
         title: "Resume Site",
-        text: "A personal Astro resume site that organizes education, experience, contact info, and selected project evidence in one accessible place.",
-        href: "https://aodom.dev",
-        linkText: "Open live site",
-        tags: ["Astro", "CSS", "Responsive UI"]
-      },
-      {
-        type: "Code",
-        badge: "GitHub",
-        title: "Public Workbench",
-        text: "Public repositories and experiments that show coding practice, technical range, and progress across application ideas.",
-        href: "https://github.com/andrewodom18",
-        linkText: "View GitHub",
-        tags: ["TypeScript", "Flutter", "Supabase"]
-      },
-      {
-        type: "Next launch",
-        badge: "Link slot",
-        title: "App Showcase",
-        text: "A placeholder for a completed app, school project, or case study that deserves a direct portfolio link once it is ready.",
+        text: "Fast Astro resume site with responsive layout and clean presentation.",
         href: "#contact",
-        linkText: "Portfolio slot",
-        tags: ["Flutter", "RevenueCat", "Backend"],
+        linkText: "Link placeholder",
+        tags: ["Astro", "Tailwind", "Responsive UI"],
+        local: true
+      },
+      {
+        type: "Mobile app",
+        badge: "App",
+        title: "Mobile App Sample",
+        text: "Reserved for a safe mobile app or case study.",
+        href: "#contact",
+        linkText: "Case study placeholder",
+        tags: ["Flutter", "Dart", "Mobile UX"],
         local: true
       }
     ]
   },
   experience: {
     label: "Work Experience",
-    title: "Past work experience and development practice.",
-    summary: "A focused resume view of practical work habits, implementation experience, and the kind of team contribution I am building toward.",
+    title: "Software Developer at BESPIN.",
+    summary: "Current role: Air Force mobile software factory.",
     items: [
       {
-        meta: "Development practice",
-        title: "Software and technical work",
-        text: "Building mobile and web software with Flutter, TypeScript, Supabase, authentication, subscriptions, and practical deployment workflows."
+        meta: "Dec 2023 - Present",
+        title: "Air Force BESPIN",
+        text: "Software developer for Business and Service Enterprise Innovation, a mobile software factory."
       },
       {
-        meta: "Past work habits",
-        title: "Implementation and follow-through",
-        text: "Carrying tasks from requirements through interface decisions, data flow, testing checks, and release-ready updates."
+        meta: "Mobile software factory",
+        title: "Mobile delivery",
+        text: "Building with maintainable code, clear interfaces, review, and release-minded implementation."
       },
       {
-        meta: "Team value",
-        title: "Maintainable work",
-        text: "Keeping code readable, changes scoped, and decisions understandable so projects are easier to review and improve."
+        meta: "Engineering habits",
+        title: "Readable work",
+        text: "Scoped changes, documented decisions, and responsive user workflows."
       }
     ]
   },
   skills: {
     label: "Technical Skills",
-    title: "Technical tools supporting the resume.",
-    summary: "Skills are listed as supporting evidence for education, experience, and portfolio projects.",
-    items: ["Computer Science", "Security Fundamentals", "Flutter", "Dart", "TypeScript", "React", "Supabase", "Docker"]
+    title: "Practical stack.",
+    summary: "Mobile, web, and security fundamentals.",
+    items: ["Mobile Development", "Flutter", "Dart", "TypeScript", "React", "Responsive UI", "APIs", "Security Fundamentals", "Docker", "Technical Writing"]
   },
   resume: {
-    label: "Resume PDF",
-    title: "Download the resume version.",
-    text: "Use the PDF for recruiting systems. This web page is the readable resume view, with portfolio links kept separate as supporting project evidence."
+    label: "Resume Note",
+    title: "Business-card QR resume.",
+    text: "This page is the public resume for QR scans. The PDF is temporarily removed while contact details are sanitized."
   },
   contact: {
-    label: "Contact",
-    title: "Contact Andrew Odom",
-    text: "Reach out about roles, internships, or recruiting conversations. The portfolio section is only for reviewing examples of work and skill growth.",
-    methods: [
-      { label: "Email", value: "andrewodom0@icloud.com", href: "mailto:andrewodom0@icloud.com" },
-      { label: "Phone", value: "(615) 828-7318", href: "tel:+16158287318" },
-      { label: "LinkedIn", value: "linkedin.com/in/andrewodom18", href: "https://www.linkedin.com/in/andrewodom18" },
-      { label: "GitHub", value: "github.com/andrewodom18", href: "https://github.com/andrewodom18" },
-      { label: "Website", value: "aodom.dev", href: "https://aodom.dev" }
+    label: "Contact Form",
+    title: "Leave your info.",
+    text: "Use this form to share your details once the private endpoint is connected.",
+    note: "Preview only. Messages are not sent yet.",
+    fields: [
+      { id: "name", label: "Name", type: "text", placeholder: "Your name" },
+      { id: "email", label: "Email", type: "email", placeholder: "you@example.com" },
+      { id: "organization", label: "Organization", type: "text", placeholder: "Company or team" },
+      { id: "message", label: "Message", type: "textarea", placeholder: "Role, project, or reason for reaching out." }
     ]
   },
   footer: {
-    note: "Built with Astro and plain CSS as a resume-first portfolio."
+    note: "Resume-first portfolio. Contact details are intentionally placeholder-only for now."
   }
 } as const;
 

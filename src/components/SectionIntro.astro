@@ -10,8 +10,8 @@ interface Props {
 const { section } = Astro.props;
 ---
 
-<div class="reveal">
-  <p class="section-label">{section.label}</p>
-  <h2>{section.title}</h2>
-  {section.summary && <p class="section-summary">{section.summary}</p>}
+<div class="reveal opacity-0 translate-y-5 transition-all duration-700 ease-out data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100">
+  <p class="mb-3 text-sm font-black uppercase tracking-[0.08em] text-teal-deep">{section.label}</p>
+  <h2 class="mb-4 max-w-2xl text-3xl font-black leading-tight tracking-normal text-ink sm:text-4xl lg:text-5xl">{section.title}</h2>
+  {section.summary && <p class="max-w-2xl text-base leading-8 text-muted sm:text-lg">{section.summary}</p>}
 </div>

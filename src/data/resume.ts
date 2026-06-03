@@ -113,7 +113,10 @@ export const resumeContent = {
     ]
   },
   footer: {
-    note: "Resume-first portfolio for QR scans and hiring conversations."
+    note: "Resume-first portfolio for QR scans and hiring conversations.",
+    links: [
+      { label: "Buy me a coffee", href: "https://buymeacoffee.com/andrewodom18" }
+    ]
   }
 } as const;
 

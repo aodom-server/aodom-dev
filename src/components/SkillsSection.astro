@@ -7,18 +7,20 @@ interface Props {
 }
 
 const { skills } = Astro.props;
+
+const skillCardClass = "reveal rounded-lg border border-black/10 bg-white p-5 shadow-xl shadow-black/5 opacity-0 translate-y-5 transition-all duration-700 ease-out data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100";
 ---
 
 <section class="bg-paper py-16 sm:py-24" id="skills">
   <div class="mx-auto grid w-[min(1160px,calc(100%_-_1.75rem))] gap-10 lg:grid-cols-[minmax(260px,0.34fr)_1fr]">
     <SectionIntro section={skills} />
-    <div class="flex flex-wrap content-start gap-3" aria-label="Technical skills">
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3" aria-label="Technical skills from GitHub toolbox">
       {
-        skills.items.map((skill) => (
-          <div class="reveal inline-flex min-h-12 items-center gap-3 rounded-full border border-black/10 bg-white px-4 text-sm font-black shadow-lg shadow-black/5 opacity-0 translate-y-5 transition-all duration-700 ease-out data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100 sm:text-base">
-            {skill}
-            <span class="size-2 rounded-full bg-coral" aria-hidden="true"></span>
-          </div>
+        skills.groups.map((group) => (
+          <article class={skillCardClass}>
+            <h3 class="mb-3 text-lg font-black leading-tight text-ink">{group.category}</h3>
+            <p class="break-words text-sm leading-7 text-muted sm:text-base">{group.tools.join(", ")}</p>
+          </article>
         ))
       }
     </div>

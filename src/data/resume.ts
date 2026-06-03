@@ -96,9 +96,34 @@ export const resumeContent = {
   },
   skills: {
     label: "Technical Skills",
-    title: "Practical stack.",
-    summary: "Mobile, web, data, automation, and security fundamentals.",
-    items: ["TypeScript", "Dart", "Python", "Flutter", "React", "Next.js", "Astro", "Tailwind CSS", "Supabase", "SQL", "Docker", "GitHub Actions"]
+    title: "Toolbox.",
+    summary: "Languages, app frameworks, backend tools, automation, and quality habits from my GitHub profile.",
+    groups: [
+      {
+        category: "Languages",
+        tools: ["Python", "TypeScript", "Dart", "SQL/PLpgSQL", "Shell", "PowerShell", "HTML", "CSS"]
+      },
+      {
+        category: "Web apps",
+        tools: ["React", "Next.js", "Astro", "Vite", "Tailwind CSS", "Node.js", "Express", "WebSockets"]
+      },
+      {
+        category: "Mobile apps",
+        tools: ["Flutter", "Riverpod", "GoRouter", "local notifications", "secure storage", "PDF generation"]
+      },
+      {
+        category: "Data and backend",
+        tools: ["Supabase", "SQLite", "Drizzle ORM", "CSV pipelines", "TOML configs", "Excel/HTML exports"]
+      },
+      {
+        category: "Infrastructure and tooling",
+        tools: ["Docker", "Compose", "Ansible", "Just", "PM2", "Git", "GitHub", "Bash", "Linux", "VS Code"]
+      },
+      {
+        category: "Quality",
+        tools: ["TypeScript checks", "ESLint", "Python unittest", "Flutter tests", "GitHub Actions", "README-first handoffs"]
+      }
+    ]
   },
   resume: {
     label: "Resume Note",

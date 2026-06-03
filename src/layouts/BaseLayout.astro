@@ -4,9 +4,12 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
+  url?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, url = "https://aodom.dev" } = Astro.props;
+const canonicalUrl = url.replace(/\/$/, "");
+const imageUrl = `${canonicalUrl}/assets/hero-workbench.png`;
 ---
 
 <!doctype html>
@@ -16,6 +19,17 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="theme-color" content="#f6f2ea" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="/assets/hero-workbench.webp" type="image/webp" />
   </head>

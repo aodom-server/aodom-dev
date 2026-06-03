@@ -86,13 +86,20 @@ export const resumeContent = {
   contact: {
     label: "Contact",
     title: "Contact.",
-    text: "Use the contact details on my card or the channel where I shared this QR resume.",
-    note: "Direct email, phone, and profile links stay off the public page for now."
+    text: "Use the public links below or the contact details on my card.",
+    note: "GitHub shows the public profile and project context. LinkedIn is the best professional profile link.",
+    links: [
+      { label: "GitHub", href: "https://github.com/andrewodom18" },
+      { label: "LinkedIn", href: "https://linkedin.com/in/andrewodom18/" },
+      { label: "Buy Me a Coffee", href: "https://buymeacoffee.com/andrewodom18" }
+    ]
   },
   footer: {
     note: "Resume-first portfolio for QR scans and hiring conversations.",
     links: [
-      { label: "Buy me a coffee", href: "https://buymeacoffee.com/andrewodom18" }
+      { label: "GitHub", href: "https://github.com/andrewodom18" },
+      { label: "LinkedIn", href: "https://linkedin.com/in/andrewodom18/" },
+      { label: "Buy Me a Coffee", href: "https://buymeacoffee.com/andrewodom18" }
     ]
   }
 } as const;

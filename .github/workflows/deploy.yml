@@ -1,4 +1,4 @@
-name: Deploy resume site
+name: CI
 
 on:
   push:
@@ -23,6 +23,9 @@ jobs:
       TS_OAUTH_CLIENT_ID: ${{ secrets.TS_OAUTH_CLIENT_ID }}
       TS_OAUTH_SECRET: ${{ secrets.TS_OAUTH_SECRET }}
       TAILSCALE_AUTHKEY: ${{ secrets.TAILSCALE_AUTHKEY }}
+      HP_DEPLOY_SSH_KEY: ${{ secrets.HP_DEPLOY_SSH_KEY }}
+      HP_DEPLOY_COMMAND: ${{ vars.HP_DEPLOY_COMMAND }}
+      REPOSITORY_NAME: ${{ github.event.repository.name }}
     steps:
       - name: Connect to Tailscale with OAuth
         if: env.TS_OAUTH_CLIENT_ID != '' && env.TS_OAUTH_SECRET != ''
@@ -46,12 +49,21 @@ jobs:
           echo "Set TS_OAUTH_CLIENT_ID + TS_OAUTH_SECRET, or TAILSCALE_AUTHKEY, in repo/org secrets." >&2
           exit 1
 
+      - name: Require deploy SSH key
+        run: |
+          if [ -z "$HP_DEPLOY_SSH_KEY" ]; then
+            echo "Set HP_DEPLOY_SSH_KEY in repo/org secrets." >&2
+            exit 1
+          fi
+
       - name: Install deploy SSH key
         run: |
           install -m 700 -d ~/.ssh
-          printf '%s\n' "${{ secrets.HP_DEPLOY_SSH_KEY }}" > ~/.ssh/hp_deploy
+          printf '%s\n' "$HP_DEPLOY_SSH_KEY" > ~/.ssh/hp_deploy
           chmod 600 ~/.ssh/hp_deploy
           ssh-keyscan -H odom-hp >> ~/.ssh/known_hosts
 
       - name: Deploy
-        run: ssh -i ~/.ssh/hp_deploy -o IdentitiesOnly=yes odom-hp@odom-hp aodom-dev
+        run: |
+          deploy_command="${HP_DEPLOY_COMMAND:-$REPOSITORY_NAME}"
+          ssh -i ~/.ssh/hp_deploy -o IdentitiesOnly=yes odom-hp@odom-hp "$deploy_command"
